@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A.M Garments - Premium Quality Clothing">
+    <link rel="stylesheet" href="my first project.css">
+    <link rel="icon" type="image/png" href="images/my-logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <title>A.M Garments — Professional Garment Shop</title>
+</head>
+
+<body>
+    <!-- HEADER & NAVIGATION -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/logo.svg" alt="A.M Garments - Professional Garment Shop" class="site-logo">
+                <div class="brand-text">
+                    <h1>A.M Garments</h1>
+                    <p class="tagline">Professional Garment Shop</p>
+                </div>
+            </div>
+            <nav class="navbar">
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#home" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="shopnowfile.html" class="nav-link"><i class="fas fa-shopping-bag"></i> Products</a></li>
+                    <li><a href="#about" class="nav-link"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="#videos" class="nav-link"><i class="fas fa-play-circle"></i> Videos</a></li>
+                    <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <li><a href="#location" class="nav-link"><i class="fas fa-map-marker-alt"></i> Location</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>Welcome to A.M Garments</h2>
+            <p>Premium Quality Clothing for Every Season</p>
+            <hr class="section-divider">
+            <button class="cta-button" id="open-carousel">Shop Now</button>
+        </div>
+    </section>
+
+    <!-- CAROUSEL MODAL -->
+    <div id="carousel-modal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" id="close-carousel">Back</button>
+            <div class="carousel">
+                <button class="carousel-nav prev" id="prev-slide">&#10094;</button>
+                <div class="carousel-track">
+                    <div class="carousel-slide active">
+                        <img src="images/t-shirt goalgala (1).jpeg" alt="Classic Suiting">
+                        <div class="slide-caption" data-name="Classic Suiting" data-price="2187" data-image="images/t-shirt goalgala (1).jpeg">
+                            <h3>Classic Suiting</h3>
+                            <p>Payment available via EasyPaisa, JazzCash, Card</p>
+                            <div>
+                                <span class="price">PKR 2,187</span>
+                                <span class="original-price">PKR 2,734</span>
+                                <span class="discount-badge">20% OFF</span>
+                            </div>
+                            <div class="size-selector">
+                                <label>Size:</label>
+                                <select class="size-select" required>
+                                    <option value="">Select Size</option>
+                                    <option value="XS">XS (Extra Small)</option>
+                                    <option value="S">S (Small)</option>
+                                    <option value="M">M (Medium)</option>
+                                    <option value="L">L (Large)</option>
+                                    <option value="XL">XL (Extra Large)</option>
+                                    <option value="XXL">XXL (2X Large)</option>
+                                </select>
+                            </div>
+                            <p class="note">Limited-time offer — secure your order in 30 minutes</p>
+                            <div class="slide-actions">
+                                <button class="btn-add-cart">Add to Cart</button>
+                                <button class="btn-buy-now">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/WhatsApp Image 2026-06-30 at 3.40.23 PM (1).jpeg" alt="Modern Fit">
+                        <div class="slide-caption" data-name="Modern Fit" data-price="2342" data-image="images/WhatsApp Image 2026-06-30 at 3.40.23 PM (1).jpeg">
+                            <h3>Modern Fit</h3>
+                            <p>Pay with EasyPaisa, JazzCash or Card</p>
+                            <div>
+                                <span class="price">PKR 2,342</span>
+                                <span class="original-price">PKR 2,928</span>
+                                <span class="discount-badge">15% OFF</span>
+                            </div>
+                            <div class="size-selector">
+                                <label>Size:</label>
+                                <select class="size-select" required>
+                                    <option value="">Select Size</option>
+                                    <option value="XS">XS (Extra Small)</option>
+                                    <option value="S">S (Small)</option>
+                                    <option value="M">M (Medium)</option>
+                                    <option value="L">L (Large)</option>
+                                    <option value="XL">XL (Extra Large)</option>
+                                    <option value="XXL">XXL (2X Large)</option>
+                                </select>
+                            </div>
+                            <p class="note">New arrival — fast checkout with secure payment</p>
+                            <div class="slide-actions">
+                                <button class="btn-add-cart">Add to Cart</button>
+                                <button class="btn-buy-now">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/t-shirt kolar (1).jpeg" alt="Elite Collection">
+                        <div class="slide-caption" data-name="Elite Collection" data-price="2465" data-image="images/t-shirt kolar (1).jpeg">
+                            <h3>Elite Collection</h3>
+                            <p>Card payment and mobile wallet accepted</p>
+                            <div>
+                                <span class="price">PKR 2,465</span>
+                                <span class="original-price">PKR 3,087</span>
+                                <span class="discount-badge">25% OFF</span>
+                            </div>
+                            <div class="size-selector">
+                                <label>Size:</label>
+                                <select class="size-select" required>
+                                    <option value="">Select Size</option>
+                                    <option value="XS">XS (Extra Small)</option>
+                                    <option value="S">S (Small)</option>
+                                    <option value="M">M (Medium)</option>
+                                    <option value="L">L (Large)</option>
+                                    <option value="XL">XL (Extra Large)</option>
+                                    <option value="XXL">XXL (2X Large)</option>
+                                </select>
+                            </div>
+                            <p class="note">Exclusive premium style — order now</p>
+                            <div class="slide-actions">
+                                <button class="btn-add-cart">Add to Cart</button>
+                                <button class="btn-buy-now">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/t-shirt print (1).jpeg" alt="Trendy Style">
+                        <div class="slide-caption" data-name="Trendy Style" data-price="2234" data-image="images/t-shirt print (1).jpeg">
+                            <h3>Trendy Style</h3>
+                            <p>Choose EasyPaisa, JazzCash or Card at checkout</p>
+                            <div>
+                                <span class="price">PKR 2,234</span>
+                                <span class="original-price">PKR 2,482</span>
+                                <span class="discount-badge">10% OFF</span>
+                            </div>
+                            <div class="size-selector">
+                                <label>Size:</label>
+                                <select class="size-select" required>
+                                    <option value="">Select Size</option>
+                                    <option value="XS">XS (Extra Small)</option>
+                                    <option value="S">S (Small)</option>
+                                    <option value="M">M (Medium)</option>
+                                    <option value="L">L (Large)</option>
+                                    <option value="XL">XL (Extra Large)</option>
+                                    <option value="XXL">XXL (2X Large)</option>
+                                </select>
+                            </div>
+                            <p class="note">Stylish new design with flexible payment options</p>
+                            <div class="slide-actions">
+                                <button class="btn-add-cart">Add to Cart</button>
+                                <button class="btn-buy-now">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/WhatsApp Image 2026-06-30 at 3.40.24 PM (1).jpeg" alt="Premium Performance Shirt">
+                        <div class="slide-caption" data-name="Premium Performance Shirt" data-price="2089" data-image="images/WhatsApp Image 2026-06-30 at 3.40.24 PM (1).jpeg">
+                            <h3>Premium Performance Shirt</h3>
+                            <p>Heatgear Suiting Collection - Professional comfort fit</p>
+                            <div>
+                                <span class="price">PKR 2,089</span>
+                                <span class="original-price">PKR 2,611</span>
+                                <span class="discount-badge">20% OFF</span>
+                            </div>
+                            <div class="size-selector">
+                                <label>Size:</label>
+                                <select class="size-select" required>
+                                    <option value="">Select Size</option>
+                                    <option value="XS">XS (Extra Small)</option>
+                                    <option value="S">S (Small)</option>
+                                    <option value="M">M (Medium)</option>
+                                    <option value="L">L (Large)</option>
+                                    <option value="XL">XL (Extra Large)</option>
+                                    <option value="XXL">XXL (2X Large)</option>
+                                </select>
+                            </div>
+                            <p class="note">Efficient construction - maximum comfort and durability</p>
+                            <div class="slide-actions">
+                                <button class="btn-add-cart">Add to Cart</button>
+                                <button class="btn-buy-now">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/t-shirt goalgala (2).jpeg" alt="Athletic A.M  Collection">
+                        <div class="slide-caption" data-name="Athletic A.M  Collection" data-price="2000" data-image="images/WhatsApp Image 2026-06-27 at 4.20.02 PM.jpeg">
+                            <h3>Athletic A.M  Collection</h3>
+                            <p>Casual Performance Wear - Comfortable everyday style</p>
+                            <div>
+                                <span class="price">PKR 2,156</span>
+                                <span class="original-price">PKR 2,695</span>
+                                <span class="discount-badge">20% OFF</span>
+                            </div>
+                            <div class="size-selector">
+                                <label>Size:</label>
+                                <select class="size-select" required>
+                                    <option value="">Select Size</option>
+                                    <option value="XS">XS (Extra Small)</option>
+                                    <option value="S">S (Small)</option>
+                                    <option value="M">M (Medium)</option>
+                                    <option value="L">L (Large)</option>
+                                    <option value="XL">XL (Extra Large)</option>
+                                    <option value="XXL">XXL (2X Large)</option>
+                                </select>
+                            </div>
+                            <p class="note">Premium casual collection - versatile and durable</p>
+                            <div class="slide-actions">
+                                <button class="btn-add-cart">Add to Cart</button>
+                                <button class="btn-buy-now">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-indicators" aria-hidden="false"></div>
+                </div>
+                <button class="carousel-nav next" id="next-slide">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Our Brand</h2>
+            <p class="about-text">
+                At A.M Garments, we focus on delivering high-quality clothing that combines comfort, durability, and modern style. Our fabrics are carefully selected to ensure they are soft on the skin, breathable, and suitable for everyday wear. Each product is stitched with precision and attention to detail, providing a perfect fit and long-lasting performance.
+            </p>
+            <div class="features">
+                <div class="feature-box">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Premium Quality</h3>
+                    <p>High-grade materials selected carefully</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Sustainable Fabrics</h3>
+                    <p>Eco-friendly and sustainable options</p>
+                </div>
+                <div class="feature-box">
+                    <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+                        <path d="M55.6 8.4c-3.9-3.9-10.2-3.9-14.1 0L6.6 43.3c-1.6 1.6-2.2 3.8-1.6 5.8l2.6 8.5c.6 2 2.3 3.6 4.4 4.1l8.5 2.6c1.9.6 4.2 0 5.8-1.6L55.6 22.5c3.9-3.9 3.9-10.2 0-14.1zM47.9 16.1c1.6 1.6 1.6 4.1 0 5.7-1.6 1.6-4.1 1.6-5.7 0-1.6-1.6-1.6-4.1 0-5.7 1.6-1.6 4.1-1.6 5.7 0z" fill="currentColor"/>
+                    </svg>
+                    <h3>Perfect Stitching</h3>
+                    <p>Precision and attention to detail</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-tshirt"></i>
+                    <h3>Comfortable Fit</h3>
+                    <p>Designed for all-day comfort</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS SECTION -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">Our Collections</h2>
+            <div class="category-links">
+                <a href="#suiting-shirts" class="category-link">Suiting Shirts & Paints</a>
+                <a href="#new-design" class="category-link">New Design Collection</a>
+                <a href="#moderate-design" class="category-link">Moderate Design Collection</a>
+                <a href="#exclusive-collection" class="category-link">Exclusive Collection</a>
+            </div>
+            
+            <!-- Suiting Shirts -->
+            <div class="product-category" id="suiting-shirts">
+                <h3 class="category-title">Suiting Shirts & Paints</h3>
+                <p class="payment-note">Payment options: EasyPaisa · JazzCash · Card Payment available</p>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="images/t-shirt kolar (2).jpeg" alt="Suiting Shirt Style 1">
+                        <span class="discount-badge">20% OFF</span>
+                        <h4>Classic Suiting</h4>
+                        <p>Premium formal collection</p>
+                        <div class="product-price">
+                            <span class="price">PKR 2,378</span>
+                            <span class="original-price">PKR 2,973</span>
+                        </div>
+                        <div class="size-selector">
+                            <label>Size:</label>
+                            <select class="size-select" required>
+                                <option value="">Select Size</option>
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
+                        <div class="product-actions">
+                            <button class="product-button btn-add-cart" onclick="addProductToCart(this)">Add to Cart</button>
+                            <button class="product-button btn-buy-now" onclick="buyProductNow(this)">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/t-shirt print (2).jpeg" alt="Suiting Shirt Style 2">
+                        <span class="discount-badge">15% OFF</span>
+                        <h4>Modern Fit</h4>
+                        <p>Contemporary design</p>
+                        <div class="product-price">
+                            <span class="price">PKR 2,423</span>
+                            <span class="original-price">PKR 2,851</span>
+                        </div>
+                        <div class="size-selector">
+                            <label>Size:</label>
+                            <select class="size-select" required>
+                                <option value="">Select Size</option>
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
+                        <div class="product-actions">
+                            <button class="product-button btn-add-cart" onclick="addProductToCart(this)">Add to Cart</button>
+                            <button class="product-button btn-buy-now" onclick="buyProductNow(this)">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/WhatsApp Image 2026-06-30 at 4.23.15 PM (1).jpeg" alt="Suiting Shirt Style 3">
+                        <span class="discount-badge">25% OFF</span>
+                        <h4>Elite Collection</h4>
+                        <p>Exclusive designs</p>
+                        <div class="product-price">
+                            <span class="price">PKR 2,312</span>
+                            <span class="original-price">PKR 3,083</span>
+                        </div>
+                        <div class="size-selector">
+                            <label>Size:</label>
+                            <select class="size-select" required>
+                                <option value="">Select Size</option>
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
+                        <div class="product-actions">
+                            <button class="product-button btn-add-cart" onclick="addProductToCart(this)">Add to Cart</button>
+                            <button class="product-button btn-buy-now" onclick="buyProductNow(this)">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/t-shirt goalgala (3).jpeg" alt="Premium Performance Shirt">
+                        <span class="discount-badge">20% OFF</span>
+                        <h4>Premium Performance Shirt</h4>
+                        <p>Heatgear Suiting Collection</p>
+                        <div class="product-price">
+                            <span class="price">PKR 2,145</span>
+                            <span class="original-price">PKR 2,681</span>
+                        </div>
+                        <div class="size-selector">
+                            <label>Size:</label>
+                            <select class="size-select" required>
+                                <option value="">Select Size</option>
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
+                        <div class="product-actions">
+                            <button class="product-button btn-add-cart" onclick="addProductToCart(this)">Add to Cart</button>
+                            <button class="product-button btn-buy-now" onclick="buyProductNow(this)">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New Design Collection -->
+            <div class="product-category" id="new-design">
+                <h3 class="category-title">New Design Collection</h3>
+                <p class="payment-note">Shop now with secure EasyPaisa, JazzCash, or Card Payment options</p>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="images/WhatsApp Image 2026-06-30 at 3.40.26 PM.jpeg" alt="New Design 1">
+                        <span class="discount-badge">10% OFF</span>
+                        <h4>Trendy Style</h4>
+                        <p>Latest fashion trends</p>
+                        <div class="product-price">
+                            <span class="price">PKR 2,498</span>
+                            <span class="original-price">PKR 2,776</span>
+                        </div>
+                        <div class="size-selector">
+                            <label>Size:</label>
+                            <select class="size-select" required>
+                                <option value="">Select Size</option>
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
+                        <div class="product-actions">
+                            <button class="product-button btn-add-cart" onclick="addProductToCart(this)">Add to Cart</button>
+                            <button class="product-button btn-buy-now" onclick="buyProductNow(this)">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/t-shirt kolar (3).jpeg" alt="New Design 2">
+                        <span class="discount-badge">20% OFF</span>
+                        <h4>Elegant Appeal</h4>
+                        <p>Sophisticated collection</p>
+                        <div class="product-price">
+                            <span class="price">PKR 2,067</span>
+                            <span class="original-price">PKR 2,584</span>
+                        </div>
+                        <div class="size-selector">
+                            <label>Size:</label>
+                            <select class="size-select" required>
+                                <option value="">Select Size</option>
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
+                        <div class="product-actions">
+                            <button class="product-button btn-add-cart" onclick="addProductToCart(this)">Add to Cart</button>
+                            <button class="product-button btn-buy-now" onclick="buyProductNow(this)">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/t-shirt print (3).jpeg" alt="New Design 3">
+                        <span class="discount-badge">15% OFF</span>
+                        <h4>Premium Range</h4>
+                        <p>High-end offerings</p>
+                        <div class="product-price">
+                            <span class="price">PKR 2,389</span>
+                            <span class="original-price">PKR 2,810</span>
+                        </div>
+                        <div class="size-selector">
+                            <label>Size:</label>
+                            <select class="size-select" required>
+                                <option value="">Select Size</option>
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
+                        <div class="product-actions">
+                            <button class="product-button btn-add-cart" onclick="addProductToCart(this)">Add to Cart</button>
+                            <button class="product-button btn-buy-now" onclick="buyProductNow(this)">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/WhatsApp Image 2026-06-30 at 4.23.16 PM.jpeg" alt="Athletic AIR Collection">
+                        <span class="discount-badge">20% OFF</span>
+                        <h4>Athletic AIR Collection</h4>
+                        <p>Casual performance wear</p>
+                        <div class="product-price">
+                            <span class="price">PKR 2,276</span>
+                            <span class="original-price">PKR 2,845</span>
+                        </div>
+                        <div class="size-selector">
+                            <label>Size:</label>
+                            <select class="size-select" required>
+                                <option value="">Select Size</option>
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
+                        <div class="product-actions">
+                            <button class="product-button btn-add-cart" onclick="addProductToCart(this)">Add to Cart</button>
+                            <button class="product-button btn-buy-now" onclick="buyProductNow(this)">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Moderate Design Collection -->
+            <div class="product-category" id="moderate-design">
+                <h3 class="category-title">Moderate Design Collection</h3>
+                <p class="payment-note">Affordable suiting shirts with easy payment options for quick checkout</p>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="images/t-shirt goalgala (4).jpeg" alt="Moderate Design 1">
+                        <span class="discount-badge">30% OFF</span>
+                        <h4>Casual Comfort</h4>
+                        <p>Everyday casual wear</p>
+                        <div class="product-price">
+                            <span class="price">PKR 2,445</span>
+                            <span class="original-price">PKR 3,493</span>
+                        </div>
+                        <div class="size-selector">
+                            <label>Size:</label>
+                            <select class="size-select" required>
+                                <option value="">Select Size</option>
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
+                        <div class="product-actions">
+                            <button class="product-button btn-add-cart" onclick="addProductToCart(this)">Add to Cart</button>
+                            <button class="product-button btn-buy-now" onclick="buyProductNow(this)">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/WhatsApp Image 2026-06-30 at 4.23.17 PM (1).jpeg" alt="Moderate Design 2">
+                        <span class="discount-badge">25% OFF</span>
+                        <h4>Relaxed Fit</h4>
+                        <p>Comfortable & stylish</p>
+                        <div class="product-price">
+                            <span class="price">PKR 2,188</span>
+                            <span class="original-price">PKR 2,917</span>
+                        </div>
+                        <div class="size-selector">
+                            <label>Size:</label>
+                            <select class="size-select" required>
+                                <option value="">Select Size</option>
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
+                        <div class="product-actions">
+                            <button class="product-button btn-add-cart" onclick="addProductToCart(this)">Add to Cart</button>
+                            <button class="product-button btn-buy-now" onclick="buyProductNow(this)">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/t-shirt kolar (4).jpeg" alt="Moderate Design 3">
+                        <span class="discount-badge">20% OFF</span>
+                        <h4>Versatile Style</h4>
+                        <p>Mix and match options</p>
+                        <div class="product-price">
+                            <span class="price">PKR 2,467</span>
+                            <span class="original-price">PKR 3,084</span>
+                        </div>
+                        <div class="size-selector">
+                            <label>Size:</label>
+                            <select class="size-select" required>
+                                <option value="">Select Size</option>
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
+                        <div class="product-actions">
+                            <button class="product-button btn-add-cart" onclick="addProductToCart(this)">Add to Cart</button>
+                            <button class="product-button btn-buy-now" onclick="buyProductNow(this)">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exclusive Collection -->
+            <div class="product-category" id="exclusive-collection">
+                <h3 class="category-title">Exclusive Collection</h3>
+                <p class="payment-note">Limited edition pieces with unique designs and premium quality</p>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="images/t-shirt print (4).jpeg" alt="Exclusive Print Design 1">
+                        <span class="discount-badge">18% OFF</span>
+                        <h4>Print Excellence</h4>
+                        <p>Bold & vibrant designs</p>
+                        <div class="product-price">
+                            <span class="price">PKR 2,356</span>
+                            <span class="original-price">PKR 2,876</span>
+                        </div>
+                        <div class="size-selector">
+                            <label>Size:</label>
+                            <select class="size-select" required>
+                                <option value="">Select Size</option>
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
+                        <div class="product-actions">
+                            <button class="product-button btn-add-cart" onclick="addProductToCart(this)">Add to Cart</button>
+                            <button class="product-button btn-buy-now" onclick="buyProductNow(this)">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/t-shirt goalgala (5).jpeg" alt="Exclusive Classic Style 1">
+                        <span class="discount-badge">22% OFF</span>
+                        <h4>Classic Elegance</h4>
+                        <p>Timeless style choice</p>
+                        <div class="product-price">
+                            <span class="price">PKR 2,201</span>
+                            <span class="original-price">PKR 2,820</span>
+                        </div>
+                        <div class="size-selector">
+                            <label>Size:</label>
+                            <select class="size-select" required>
+                                <option value="">Select Size</option>
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
+                        <div class="product-actions">
+                            <button class="product-button btn-add-cart" onclick="addProductToCart(this)">Add to Cart</button>
+                            <button class="product-button btn-buy-now" onclick="buyProductNow(this)">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/t-shirt kolar (5).jpeg" alt="Exclusive Kolar Design 1">
+                        <span class="discount-badge">28% OFF</span>
+                        <h4>Modern Fusion</h4>
+                        <p>Contemporary patterns</p>
+                        <div class="product-price">
+                            <span class="price">PKR 2,334</span>
+                            <span class="original-price">PKR 3,241</span>
+                        </div>
+                        <div class="size-selector">
+                            <label>Size:</label>
+                            <select class="size-select" required>
+                                <option value="">Select Size</option>
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
+                        <div class="product-actions">
+                            <button class="product-button btn-add-cart" onclick="addProductToCart(this)">Add to Cart</button>
+                            <button class="product-button btn-buy-now" onclick="buyProductNow(this)">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/WhatsApp Image 2026-06-30 at 4.23.18 PM (2).jpeg" alt="Exclusive Premium Shirt">
+                        <span class="discount-badge">16% OFF</span>
+                        <h4>Premium Exclusive</h4>
+                        <p>Luxury collection item</p>
+                        <div class="product-price">
+                            <span class="price">PKR 2,412</span>
+                            <span class="original-price">PKR 2,872</span>
+                        </div>
+                        <div class="size-selector">
+                            <label>Size:</label>
+                            <select class="size-select" required>
+                                <option value="">Select Size</option>
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
+                        <div class="product-actions">
+                            <button class="product-button btn-add-cart" onclick="addProductToCart(this)">Add to Cart</button>
+                            <button class="product-button btn-buy-now" onclick="buyProductNow(this)">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEOS SECTION -->
+    <section class="videos" id="videos">
+        <div class="container">
+            <h2 class="section-title">Product Videos</h2>
+            <p class="section-subtitle">Watch our latest collection and styling tips</p>
+            <div class="videos-grid">
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Product Video 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>Premium Performance Shirt Collection</h3>
+                        <p>Discover our latest suiting collection with premium comfort fit</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Product Video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>Athletic AIR Collection Showcase</h3>
+                        <p>Casual performance wear for everyday style and comfort</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Product Video 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>Styling Guide & Tips</h3>
+                        <p>Learn how to style your A.M Garments pieces like a pro</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Product Video 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>Customer Testimonials</h3>
+                        <p>Hear from our satisfied customers about their experiences</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-wrapper">
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+92 300 837 5665</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>Saimrk11@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Alrahim shopping centre police line Hyderabad</p>
+                            <div class="map-container">
+                                <iframe src="https://www.google.com/maps?q=Alrahim+shopping+centre+police+line+Hyderabad&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="location">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About A.M Garments</h4>
+                    <p>We provide premium quality clothing with exceptional craftsmanship and style.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1ChAg7WYz5/" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/a.m_78611?utm_source=qr&igsh=ZXVoaGlzZ2ZzNzkw" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/saimkhan5b?s=21" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://whatsapp.com/channel/0029VbD7kGEBPzjeJd3TUP3S" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.tiktok.com/@amgarment1?_r=1&_t=ZS-97TbdbtZ4T4" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 A.M Garments. All Rights Reserved. | Privacy Policy | Terms & Conditions</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
