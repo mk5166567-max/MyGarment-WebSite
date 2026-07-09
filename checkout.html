@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A.M Garments - Checkout">
+    <link rel="stylesheet" href="my first project.css">
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="icon" type="image/png" href="images/my-logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Checkout - A.M Garments</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/logo.svg" alt="A.M Garments" class="site-logo">
+                <div class="brand-text">
+                    <h1>A.M Garments</h1>
+                    <p class="tagline">Professional Garment Shop</p>
+                </div>
+            </div>
+            <nav class="navbar">
+                <a href="my first project.html" class="nav-link"><i class="fas fa-arrow-left"></i> Back to Shop</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CHECKOUT SECTION -->
+    <section class="checkout-section">
+        <div class="checkout-container">
+            <!-- Progress Steps -->
+            <div class="checkout-progress">
+                <div class="progress-step active" id="step-1">
+                    <div class="step-number">1</div>
+                    <p>Cart Review</p>
+                </div>
+                <div class="progress-step" id="step-2">
+                    <div class="step-number">2</div>
+                    <p>Shipping Info</p>
+                </div>
+                <div class="progress-step" id="step-3">
+                    <div class="step-number">3</div>
+                    <p>Payment</p>
+                </div>
+                <div class="progress-step" id="step-4">
+                    <div class="step-number">4</div>
+                    <p>Confirmation</p>
+                </div>
+            </div>
+
+            <!-- Checkout Content -->
+            <div class="checkout-content">
+                <!-- Step 1: Cart Review -->
+                <div class="checkout-step active" id="step-1-content">
+                    <h2><i class="fas fa-shopping-bag"></i> Order Review</h2>
+                    <div class="cart-items-display">
+                        <div id="cart-items-container" class="items-list">
+                            <!-- Cart items will be populated here -->
+                        </div>
+                        <div id="empty-cart-message" class="empty-cart-message" style="display: none;">
+                            <i class="fas fa-inbox"></i>
+                            <p>Your cart is empty</p>
+                            <a href="my first project.html" class="btn-primary">Continue Shopping</a>
+                        </div>
+                    </div>
+                    <div class="order-summary">
+                        <h3>Order Summary</h3>
+                        <div class="summary-row">
+                            <span>Subtotal:</span>
+                            <span id="subtotal">PKR 0</span>
+                        </div>
+                        <div class="summary-row">
+                            <span><i class="fas fa-truck"></i> Delivery (All Pakistan):</span>
+                            <span id="shipping">PKR 200</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Tax (0%):</span>
+                            <span id="tax">PKR 0</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total Amount:</span>
+                            <span id="total-price">PKR 0</span>
+                        </div>
+                    </div>
+                    <button id="continue-button" class="btn-next" onclick="goToStep(2)">Continue to Shipping <i class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Step 2: Shipping Information -->
+                <div class="checkout-step" id="step-2-content">
+                    <h2><i class="fas fa-truck"></i> Shipping Information</h2>
+                    <p class="step-description">Please provide your delivery details below</p>
+                    <div class="delivery-info-banner">
+                        <i class="fas fa-check-circle"></i>
+                        <p>All orders include <strong>PKR 200 delivery charge</strong> for delivery across Pakistan</p>
+                    </div>
+                    <form class="shipping-form" id="shipping-form">
+                        <div class="form-section">
+                            <h3>Personal Information</h3>
+                            <div class="form-group">
+                                <label for="fullname">Full Name *</label>
+                                <input type="text" id="fullname" placeholder="Enter your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" placeholder="Enter your email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" placeholder="+92 300 123 4567" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>Delivery Address</h3>
+                            <div class="form-group">
+                                <label for="address">Full Address *</label>
+                                <input type="text" id="address" placeholder="Street address, area" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">City *</label>
+                                    <input type="text" id="city" placeholder="Hyderabad" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="postal">Postal Code *</label>
+                                    <input type="text" id="postal" placeholder="71000" required>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>Special Instructions (Optional)</h3>
+                            <div class="form-group">
+                                <label for="notes">Delivery Notes</label>
+                                <textarea id="notes" placeholder="e.g., leave at door, ring doorbell twice" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="step-buttons">
+                        <button class="btn-back" onclick="goToStep(1)"><i class="fas fa-arrow-left"></i> Back</button>
+                        <button class="btn-next" onclick="validateShippingAndContinue()">Continue to Payment <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Payment Method -->
+                <div class="checkout-step" id="step-3-content">
+                    <h2><i class="fas fa-credit-card"></i> Select Payment Method</h2>
+                    <p class="step-description">Choose your preferred payment option below</p>
+                    <div class="payment-methods">
+                        <!-- EasyPaisa -->
+                        <div class="payment-option" onclick="selectPaymentMethod('easypaisa')">
+                            <input type="radio" name="payment-method" value="easypaisa" id="payment-easypaisa" checked>
+                            <label for="payment-easypaisa" class="payment-label">
+                                <div class="payment-header">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>EasyPaisa</span>
+                                </div>
+                                <p>Send money directly to our EasyPaisa account</p>
+                                <div class="payment-details">
+                                    <p><strong>Account Number:</strong> 03153361296</p>
+                                    <p><strong>Account Name:</strong> SAIM KHAN</p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <!-- JazzCash -->
+                        <div class="payment-option" onclick="selectPaymentMethod('jazzcash')">
+                            <input type="radio" name="payment-method" value="jazzcash" id="payment-jazzcash">
+                            <label for="payment-jazzcash" class="payment-label">
+                                <div class="payment-header">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>JazzCash</span>
+                                </div>
+                                <p>Send money directly to our JazzCash account</p>
+                                <div class="payment-details">
+                                    <p><strong>Account Number:</strong> 03008375665</p>
+                                    <p><strong>Account Name:</strong> SAIM KHAN</p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <!-- Bank Transfer -->
+                        <div class="payment-option" onclick="selectPaymentMethod('bank')">
+                            <input type="radio" name="payment-method" value="bank" id="payment-bank">
+                            <label for="payment-bank" class="payment-label">
+                                <div class="payment-header">
+                                    <i class="fas fa-university"></i>
+                                    <span>Bank Transfer</span>
+                                </div>
+                                <p>Transfer payment directly to our bank account.</p>
+                                <div class="payment-details">
+                                    <p><strong>Bank Name:</strong> United Bank Limited</p>
+                                    <p><strong>Account Title:</strong> SAIM KHAN</p>
+                                    <p><strong>Account Number:</strong> 03008375665</p>
+                                    <p><strong>IBAN:</strong> PK00UBLP012345678901234</p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <!-- Card Payment -->
+                        <div class="payment-option" onclick="selectPaymentMethod('card')">
+                            <input type="radio" name="payment-method" value="card" id="payment-card">
+                            <label for="payment-card" class="payment-label">
+                                <div class="payment-header">
+                                    <i class="fas fa-credit-card"></i>
+                                    <span>Card Payment</span>
+                                </div>
+                                <p>Pay securely with your Visa, MasterCard, or domestic debit/credit card.</p>
+                            </label>
+                        </div>
+
+                        <!-- Cash on Delivery -->
+                        <div class="payment-option" onclick="selectPaymentMethod('cod')">
+                            <input type="radio" name="payment-method" value="cod" id="payment-cod">
+                            <label for="payment-cod" class="payment-label">
+                                <div class="payment-header">
+                                    <i class="fas fa-money-bill"></i>
+                                    <span>Cash on Delivery</span>
+                                </div>
+                                <p>Pay when your order arrives at your doorstep</p>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Card Payment Details -->
+                    <div id="card-payment-form" class="card-payment-form" style="display: none;">
+                        <h3>Card Information</h3>
+                        <div class="card-row">
+                            <div class="form-group">
+                                <label for="card-name">Cardholder Name *</label>
+                                <input type="text" id="card-name" placeholder="Name on card">
+                            </div>
+                            <div class="form-group">
+                                <label for="card-number">Card Number *</label>
+                                <input type="text" id="card-number" placeholder="0000 0000 0000 0000" maxlength="19">
+                            </div>
+                        </div>
+                        <div class="card-row">
+                            <div class="form-group">
+                                <label for="card-expiry">Expiry Date *</label>
+                                <input type="text" id="card-expiry" placeholder="MM/YY" maxlength="5">
+                            </div>
+                            <div class="form-group">
+                                <label for="card-cvc">CVC *</label>
+                                <input type="text" id="card-cvc" placeholder="123" maxlength="4">
+                            </div>
+                        </div>
+                        <p class="card-note">Your card details are used only to verify payment information for this demo checkout. No actual transaction is processed.</p>
+                    </div>
+
+                    <!-- Payment Confirmation -->
+                    <div id="payment-confirmation" class="payment-confirmation" style="display: none;">
+                        <div class="delivery-note-box">
+                            <p><i class="fas fa-info-circle"></i> <strong>Delivery Charge:</strong> PKR 200 (Applicable to all locations in Pakistan)</p>
+                        </div>
+                        <h3>Order Summary</h3>
+                        <div class="summary-row">
+                            <span>Total Amount:</span>
+                            <span class="amount-highlight" id="payment-total">PKR 0</span>
+                        </div>
+                        <div class="payment-instructions" id="payment-instructions"></div>
+                        <div id="payment-status-banner" class="payment-status-banner" style="display:none;">
+                            <div class="security-notice">
+                                <i class="fas fa-shield-alt"></i>
+                                <p><strong>⚠️ IMPORTANT:</strong> Complete the payment BEFORE confirming the order. Payment verification is required.</p>
+                            </div>
+                            <p>Open the app and complete the payment. Then provide the transaction ID below:</p>
+                            <div class="form-group">
+                                <label for="transaction-id"><strong>Transaction ID *</strong></label>
+                                <input type="text" id="transaction-id" placeholder="Enter your transaction ID (e.g., TXN123456789)" required>
+                                <small>This is required to verify your payment and confirm the order.</small>
+                            </div>
+                            <div class="payment-action-buttons">
+                                <button type="button" class="payment-action-button" onclick="verifyPaymentAndConfirm()"><i class="fas fa-check"></i> Verify Payment & Confirm Order</button>
+                                <button type="button" class="payment-action-button" onclick="cancelPendingPayment()"><i class="fas fa-times"></i> Change Payment Method</button>
+                            </div>
+                        </div>
+                        <div id="payment-verified-message" class="payment-verified-message" style="display:none;">
+                            <i class="fas fa-check-circle" style="color: #27ae60; font-size: 2rem;"></i>
+                            <h4>Payment Verified ✓</h4>
+                            <p>Your payment has been verified. Click "Complete Order" to finalize your order.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-buttons">
+                        <button class="btn-back" onclick="goToStep(2)">Back</button>
+                        <button class="btn-next" id="confirm-order-btn" onclick="processPayment()">Confirm Order</button>
+                    </div>
+                </div>
+
+                <!-- Step 4: Order Confirmation -->
+                <div class="checkout-step" id="step-4-content">
+                    <div class="confirmation-message">
+                        <div class="success-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h2>Order Confirmed!</h2>
+                        <p class="confirmation-text">Thank you for your purchase! Your order has been successfully received and is now being processed.</p>
+                    </div>
+
+                    <div class="order-details">
+                        <div class="detail-item">
+                            <span class="label"><i class="fas fa-hashtag"></i> Order Number:</span>
+                            <span class="value" id="order-number">#ORD-000000</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label"><i class="fas fa-envelope"></i> Confirmation Email:</span>
+                            <span class="value" id="confirm-email">email@example.com</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label"><i class="fas fa-money-bill"></i> Order Total:</span>
+                            <span class="value" id="confirm-total">PKR 0</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label"><i class="fas fa-calendar"></i> Estimated Delivery:</span>
+                            <span class="value" id="delivery-date">3-5 business days</span>
+                        </div>
+                    </div>
+
+                    <div class="order-description">
+                        <h3><i class="fas fa-list"></i> Order Items</h3>
+                        <p id="order-description">All ordered items and notes will appear here.</p>
+                    </div>
+
+                    <div id="receipt-preview" class="receipt-preview"></div>
+
+                    <div class="confirmation-note">
+                        <i class="fas fa-info-circle"></i>
+                        <p>A detailed confirmation email has been sent to <strong id="email-display">your email</strong> with complete order details, tracking information, and payment instructions.</p>
+                    </div>
+
+                    <div class="confirmation-buttons">
+                        <button class="btn-primary" onclick="continueShopping()"><i class="fas fa-shopping-bag"></i> Continue Shopping</button>
+                        <button class="btn-secondary" onclick="downloadReceipt()"><i class="fas fa-download"></i> Download Receipt</button>
+                        <button class="btn-secondary" onclick="openGmailConfirmation(window.lastOrder)"><i class="fas fa-envelope"></i> Send Email Confirmation</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About A.M Garments</h4>
+                    <p>Premium quality clothing with exceptional craftsmanship.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <p>Email: Saimrk11@gmail.com</p>
+                    <p>Phone: +92 300 837 5665</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 A.M Garments. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="checkout.js"></script>
+</body>
+
+</html>
+
