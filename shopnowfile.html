@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop Premium Garments at A.M Garments">
+    <link rel="stylesheet" href="my first project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <title>Shop Now - A.M Garments — Professional Garment Shop</title>
+</head>
+
+<body>
+    <!-- HEADER & NAVIGATION -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/logo.svg" alt="A.M Garments - Professional Garment Shop" class="site-logo">
+                <div class="brand-text">
+                    <h1>A.M Garments</h1>
+                    <p class="tagline">Professional Garment Shop</p>
+                </div>
+            </div>
+            <nav class="navbar">
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="my first project.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#shop" class="nav-link"><i class="fas fa-shopping-bag"></i> Shop</a></li>
+                    <li><a href="my first project.html#about" class="nav-link"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="my first project.html#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <li class="cart-icon-wrapper">
+                        <a href="checkout.html" class="nav-link cart-link">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- BREADCRUMB -->
+    <section class="breadcrumb">
+        <div class="container">
+            <a href="my first project.html">Home</a> / <span>Shop</span>
+        </div>
+    </section>
+
+    <!-- SHOP HEADER -->
+    <section class="shop-header">
+        <div class="container">
+            <h1>Shop Our Collection</h1>
+            <p>Discover our premium range of garments crafted with perfection</p>
+        </div>
+    </section>
+
+    <!-- SHOP SECTION -->
+    <section class="shop" id="shop">
+        <div class="container">
+            <div class="shop-wrapper">
+                <!-- SIDEBAR - FILTERS -->
+                <aside class="shop-sidebar">
+                    <button class="sidebar-toggle" id="sidebar-toggle">
+                        <i class="fas fa-filter"></i> Filters
+                    </button>
+
+                    <div class="filters" id="filters">
+                        <!-- CATEGORY FILTER -->
+                        <div class="filter-group">
+                            <h3 class="filter-title">
+                                <i class="fas fa-list"></i> Category
+                            </h3>
+                            <label class="filter-item">
+                                <input type="checkbox" value="shirts" class="category-filter" checked>
+                                <span>Shirts & Paints</span>
+                            </label>
+                            <label class="filter-item">
+                                <input type="checkbox" value="casual" class="category-filter">
+                                <span>Casual Wear</span>
+                            </label>
+                            <label class="filter-item">
+                                <input type="checkbox" value="formal" class="category-filter">
+                                <span>Formal Wear</span>
+                            </label>
+                        </div>
+
+                        <!-- SIZE FILTER -->
+                        <div class="filter-group">
+                            <h3 class="filter-title">
+                                <i class="fas fa-ruler"></i> Size
+                            </h3>
+                            <label class="filter-item">
+                                <input type="checkbox" value="xs" class="size-filter">
+                                <span>Extra Small (XS)</span>
+                            </label>
+                            <label class="filter-item">
+                                <input type="checkbox" value="s" class="size-filter">
+                                <span>Small (S)</span>
+                            </label>
+                            <label class="filter-item">
+                                <input type="checkbox" value="m" class="size-filter" checked>
+                                <span>Medium (M)</span>
+                            </label>
+                            <label class="filter-item">
+                                <input type="checkbox" value="l" class="size-filter">
+                                <span>Large (L)</span>
+                            </label>
+                            <label class="filter-item">
+                                <input type="checkbox" value="xl" class="size-filter">
+                                <span>Extra Large (XL)</span>
+                            </label>
+                            <label class="filter-item">
+                                <input type="checkbox" value="xxl" class="size-filter">
+                                <span>2XL</span>
+                            </label>
+                        </div>
+
+                        <!-- PRICE FILTER -->
+                        <div class="filter-group">
+                            <h3 class="filter-title">
+                                <i class="fas fa-dollar-sign"></i> Price Range
+                            </h3>
+                            <div class="price-filter">
+                                <input type="range" min="0" max="200" value="200" id="priceRange">
+                                <p>Price: <span id="priceValue">$0 - $200</span></p>
+                            </div>
+                        </div>
+
+                        <!-- RATING FILTER -->
+                        <div class="filter-group">
+                            <h3 class="filter-title">
+                                <i class="fas fa-star"></i> Rating
+                            </h3>
+                            <label class="filter-item">
+                                <input type="checkbox" value="5" class="rating-filter">
+                                <span><i class="fas fa-star"></i> 5 Stars</span>
+                            </label>
+                            <label class="filter-item">
+                                <input type="checkbox" value="4" class="rating-filter">
+                                <span><i class="fas fa-star"></i> 4 Stars & Up</span>
+                            </label>
+                            <label class="filter-item">
+                                <input type="checkbox" value="3" class="rating-filter">
+                                <span><i class="fas fa-star"></i> 3 Stars & Up</span>
+                            </label>
+                        </div>
+
+                        <button class="reset-filters" id="resetFilters">
+                            <i class="fas fa-redo"></i> Reset Filters
+                        </button>
+                    </div>
+                </aside>
+
+                <!-- PRODUCTS SECTION -->
+                <div class="shop-content">
+                    <!-- SORT & VIEW OPTIONS -->
+                    <div class="shop-top-bar">
+                        <div class="sort-wrapper">
+                            <label for="sort">Sort by:</label>
+                            <select id="sort" class="sort-select">
+                                <option value="newest">Newest</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="popular">Most Popular</option>
+                                <option value="rating">Highest Rated</option>
+                            </select>
+                        </div>
+                        <div class="view-options">
+                            <button class="view-btn active" data-view="grid3" title="3 Columns">
+                                <i class="fas fa-th"></i>
+                            </button>
+                            <button class="view-btn" data-view="grid2" title="2 Columns">
+                                <i class="fas fa-th-large"></i>
+                            </button>
+                            <button class="view-btn" data-view="list" title="List View">
+                                <i class="fas fa-list"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- PRODUCTS GRID -->
+                    <div class="products-grid" id="productsGrid">
+                        <!-- Product Card 1 -->
+                        <div class="product-item" data-category="shirts" data-price="89" data-rating="5">
+                            <div class="product-image">
+                                <img src="images/t-shirt print (1).jpeg" alt="Classic Suiting Shirt">
+                                <span class="product-badge new">New</span>
+                                <div class="product-overlay">
+                                    <button class="btn-quickview" onclick="quickView(this)"><i class="fas fa-eye"></i> Quick View</button>
+                                    <button class="btn-addcart" onclick="shopAddToCart(this, true)"><i class="fas fa-credit-card"></i> Go to Checkout</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Classic Suiting Shirt</h4>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>(125)</span>
+                                </div>
+                                <p class="product-description">Premium quality formal shirt with perfect stitching.</p>
+                                <div class="product-price">
+                                    <span class="price">$89.99</span>
+                                    <span class="original-price">$120.00</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn-size">Select Size</button>
+                                    <button class="btn-wishlist" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 2 -->
+                        <div class="product-item" data-category="shirts" data-price="79" data-rating="4">
+                            <div class="product-image">
+                                <img src="images/t-shirt print (2).jpeg" alt="Modern Fit Shirt">
+                                <span class="product-badge sale">-25%</span>
+                                <div class="product-overlay">
+                                    <button class="btn-quickview" onclick="quickView(this)"><i class="fas fa-eye"></i> Quick View</button>
+                                    <button class="btn-addcart" onclick="shopAddToCart(this, true)"><i class="fas fa-credit-card"></i> Go to Checkout</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Modern Fit Shirt</h4>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>(98)</span>
+                                </div>
+                                <p class="product-description">Contemporary design with superior comfort.</p>
+                                <div class="product-price">
+                                    <span class="price">$79.99</span>
+                                    <span class="original-price">Rs 5000</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn-size">Select Size</button>
+                                    <button class="btn-wishlist" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 3 -->
+                        <div class="product-item" data-category="shirts" data-price="99" data-rating="5">
+                            <div class="product-image">
+                                <img src="images/t-shirt print (3).jpeg" alt="Elite Collection Shirt">
+                                <span class="product-badge premium">Premium</span>
+                                <div class="product-overlay">
+                                    <button class="btn-quickview" onclick="quickView(this)"><i class="fas fa-eye"></i> Quick View</button>
+                                    <button class="btn-addcart" onclick="shopAddToCart(this, true)"><i class="fas fa-credit-card"></i> Go to Checkout</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Elite Collection Shirt</h4>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>(156)</span>
+                                </div>
+                                <p class="product-description">Exclusive design with premium fabrics.</p>
+                                <div class="product-price">
+                                    <span class="price">Rs 2000</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn-size">Select Size</button>
+                                    <button class="btn-wishlist" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 4 -->
+                        <div class="product-item" data-category="formal" data-price="95" data-rating="5">
+                            <div class="product-image">
+                                <img src="images/t-shirt print (4).jpeg" alt="Trendy Style Shirt">
+                                <span class="product-badge new">New</span>
+                                <div class="product-overlay">
+                                    <button class="btn-quickview" onclick="quickView(this)"><i class="fas fa-eye"></i> Quick View</button>
+                                    <button class="btn-addcart" onclick="shopAddToCart(this, true)"><i class="fas fa-credit-card"></i> Go to Checkout</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Trendy Style Shirt</h4>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>(142)</span>
+                                </div>
+                                <p class="product-description">Latest fashion trends in premium quality.</p>
+                                <div class="product-price">
+                                    <span class="price">Rs 2500</span>
+                                    <span class="original-price">Rs 3500</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn-size">Select Size</button>
+                                    <button class="btn-wishlist" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 5 -->
+                        <div class="product-item" data-category="formal" data-price="105" data-rating="4">
+                            <div class="product-image">
+                                <img src="images/t-shirt print (5).jpeg" alt="Elegant Appeal Shirt">
+                                <div class="product-overlay">
+                                    <button class="btn-quickview" onclick="quickView(this)"><i class="fas fa-eye"></i> Quick View</button>
+                                    <button class="btn-addcart" onclick="shopAddToCart(this, true)"><i class="fas fa-credit-card"></i> Go to Checkout</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Elegant Appeal Shirt</h4>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>(89)</span>
+                                </div>
+                                <p class="product-description">Sophisticated collection for formal occasions.</p>
+                                <div class="product-price">
+                                    <span class="price">Rs 2000</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn-size">Select Size</button>
+                                    <button class="btn-wishlist" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 6 -->
+                        <div class="product-item" data-category="casual" data-price="69" data-rating="5">
+                            <div class="product-image">
+                                <img src="images/t-shirt print (6).jpeg" alt="Casual Comfort Wear">
+                                <span class="product-badge sale">-30%</span>
+                                <div class="product-overlay">
+                                    <button class="btn-quickview" onclick="quickView(this)"><i class="fas fa-eye"></i> Quick View</button>
+                                    <button class="btn-addcart" onclick="shopAddToCart(this, true)"><i class="fas fa-credit-card"></i> Go to Checkout</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Casual Comfort Wear</h4>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>(201)</span>
+                                </div>
+                                <p class="product-description">Perfect for everyday casual wear.</p>
+                                <div class="product-price">
+                                    <span class="price">$69.99</span>
+                                    <span class="original-price">$99.00</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn-size">Select Size</button>
+                                    <button class="btn-wishlist" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 7 -->
+                        <div class="product-item" data-category="casual" data-price="85" data-rating="5">
+                            <div class="product-image">
+                                <img src="images/t-shirt goalgala (1).jpeg" alt="Relaxed Fit Shirt">
+                                <span class="product-badge new">New</span>
+                                <div class="product-overlay">
+                                    <button class="btn-quickview" onclick="quickView(this)"><i class="fas fa-eye"></i> Quick View</button>
+                                    <button class="btn-addcart" onclick="shopAddToCart(this, true)"><i class="fas fa-credit-card"></i> Go to Checkout</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Relaxed Fit Shirt</h4>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>(112)</span>
+                                </div>
+                                <p class="product-description">Comfortable and stylish casual option.</p>
+                                <div class="product-price">
+                                    <span class="price">Rs 1500</span>
+                                    <span class="original-price">Rs 2200</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn-size">Select Size</button>
+                                    <button class="btn-wishlist" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 8 -->
+                        <div class="product-item" data-category="casual" data-price="95" data-rating="5">
+                            <div class="product-image">
+                                <img src="images/t-shirt goalgala (2).jpeg" alt="Versatile Style Shirt">
+                                <span class="product-badge premium">Premium</span>
+                                <div class="product-overlay">
+                                    <button class="btn-quickview" onclick="quickView(this)"><i class="fas fa-eye"></i> Quick View</button>
+                                    <button class="btn-addcart" onclick="shopAddToCart(this, true)"><i class="fas fa-credit-card"></i> Go to Checkout</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Versatile Style Shirt</h4>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>(167)</span>
+                                </div>
+                                <p class="product-description">Mix and match with any outfit.</p>
+                                <div class="product-price">
+                                    <span class="price">$95.00</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn-size">Select Size</button>
+                                    <button class="btn-wishlist" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PAGINATION -->
+                    <div class="pagination">
+                        <button class="page-btn active">1</button>
+                        <button class="page-btn">2</button>
+                        <button class="page-btn">3</button>
+                        <button class="page-btn">Next <i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>Send us a message directly and we'll receive it in Gmail or by phone.</p>
+                    <p><strong>Email:</strong> <a href="mailto:mk5166567@gmail.com">mk5166567@gmail.com</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+923153361296">+9231533 61296</a> | <a href="sms:+923153361296">Send SMS</a></p>
+                    <p>Use the form below to prefill Gmail compose in the browser.</p>
+                </div>
+                <form id="contactForm" class="contact-form">
+                    <label for="contactName">Your Name</label>
+                    <input type="text" id="contactName" required placeholder="Enter your name">
+
+                    <label for="contactEmail">Your Email</label>
+                    <input type="email" id="contactEmail" required placeholder="Enter your email">
+
+                    <label for="contactSubject">Subject</label>
+                    <input type="text" id="contactSubject" required placeholder="Message subject">
+
+                    <label for="contactMessage">Message</label>
+                    <textarea id="contactMessage" required placeholder="Write your message here"></textarea>
+
+                    <div class="contact-actions">
+                        <button type="submit" class="btn-send-email">Open Gmail Compose</button>
+                        <button type="button" id="sendSmsButton" class="btn-send-sms">Send SMS</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- SHOPPING CART MODAL -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-modal-content">
+            <div class="cart-header">
+                <h2>Shopping Cart</h2>
+                <button class="close-cart" onclick="closeCart()">&times;</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <p class="empty-cart">Your cart is empty</p>
+            </div>
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping:</span>
+                    <span id="shipping">Free</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total:</span>
+                    <span id="total">$0.00</span>
+                </div>
+            </div>
+            <button class="checkout-btn" onclick="goToCheckout()">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- QUICK VIEW MODAL -->
+    <div class="quickview-modal" id="quickviewModal">
+        <div class="quickview-modal-content">
+            <button class="close-modal" onclick="closeQuickView()">&times;</button>
+            <div class="quickview-container">
+                <div class="quickview-image">
+                    <img id="quickviewImage" src="" alt="Product">
+                </div>
+                <div class="quickview-info">
+                    <h2 id="quickviewTitle"></h2>
+                    <div class="quickview-rating" id="quickviewRating"></div>
+                    <div class="quickview-price">
+                        <span class="price" id="quickviewPrice"></span>
+                    </div>
+                    <p id="quickviewDescription"></p>
+                    <div class="quickview-sizes">
+                        <label>Select Size:</label>
+                        <div class="size-options">
+                            <button class="size-option">XS</button>
+                            <button class="size-option">S</button>
+                            <button class="size-option active">M</button>
+                            <button class="size-option">L</button>
+                            <button class="size-option">XL</button>
+                            <button class="size-option">2XL</button>
+                        </div>
+                    </div>
+                    <div class="quickview-quantity">
+                        <label>Quantity:</label>
+                        <div class="quantity-selector">
+                            <button class="qty-btn" onclick="decreaseQty()">-</button>
+                            <input type="number" id="quantity" value="1" min="1" max="10">
+                            <button class="qty-btn" onclick="increaseQty()">+</button>
+                        </div>
+                    </div>
+                    <button class="btn-addcart-modal" onclick="shopAddToCartFromModal()">
+                        <i class="fas fa-credit-card"></i> Go to Checkout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About A.M Garments</h4>
+                    <p>We provide premium quality clothing with exceptional craftsmanship and style.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="my first project.html">Home</a></li>
+                        <li><a href="#shop">Shop</a></li>
+                        <li><a href="my first project.html#about">About</a></li>
+                        <li><a href="my first project.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.tiktok.com/@amgarment1?_r=1&_t=ZS-97TbdbtZ4T4" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 A.M Garments. All Rights Reserved. | Privacy Policy | Terms & Conditions</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+        const sidebarToggle = document.getElementById('sidebar-toggle');
+        const filters = document.getElementById('filters');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        sidebarToggle.addEventListener('click', () => {
+            filters.classList.toggle('active');
+        });
+
+        // Shopping Cart: delegate to shared cart in main.js when available
+        const sharedAddToCart = window.addToCart;
+        const sharedUpdateCartIcon = window.updateCartIcon;
+        const sharedGoToCheckout = window.goToCheckout;
+
+        function getSelectedSize(productItem) {
+            const sizeSelect = productItem.querySelector('.size-select');
+            return sizeSelect ? sizeSelect.value.trim() : '';
+        }
+
+        function shopAddToCart(btnOrElement, redirectToCheckout = false) {
+            const btn = btnOrElement instanceof Element ? btnOrElement : (btnOrElement && btnOrElement.target) ? btnOrElement.target : null;
+            const productItem = btn ? btn.closest('.product-item') : null;
+            if (!productItem) return;
+            const title = productItem.querySelector('h4')?.textContent || productItem.querySelector('h3')?.textContent || 'Product';
+            const price = parseFloat(productItem.dataset.price) || parseFloat(productItem.querySelector('.price')?.textContent.replace(/[^0-9\.]/g, '')) || 0;
+            const image = productItem.querySelector('img')?.src || '';
+            const rawCategory = productItem.dataset.category || 'general';
+            const category = rawCategory.charAt(0).toUpperCase() + rawCategory.slice(1);
+            const size = getSelectedSize(productItem) || 'One Size';
+
+            if (productItem.querySelector('.size-select') && !size) {
+                showNotification('Please select a size before adding to cart.', 'warning');
+                return;
+            }
+
+            if (typeof sharedAddToCart === 'function') {
+                sharedAddToCart(title, price, image, size, category);
+            } else {
+                const fallback = JSON.parse(localStorage.getItem('cart') || '[]');
+                fallback.push({ id: Date.now(), name: title, price, quantity: 1, image, category, size });
+                localStorage.setItem('cart', JSON.stringify(fallback));
+            }
+
+            if (typeof sharedUpdateCartIcon === 'function') sharedUpdateCartIcon();
+
+            showNotification('Added to cart!');
+
+            if (redirectToCheckout && typeof sharedGoToCheckout === 'function') {
+                sharedGoToCheckout();
+            } else if (redirectToCheckout) {
+                window.location.href = 'checkout.html';
+            }
+        }
+
+        function setupProductSizeSelectors() {
+            const sizeOptions = [
+                { value: '', label: 'Select Size' },
+                { value: 'XS', label: 'XS' },
+                { value: 'S', label: 'S' },
+                { value: 'M', label: 'M' },
+                { value: 'L', label: 'L' },
+                { value: 'XL', label: 'XL' },
+                { value: 'XXL', label: 'XXL' }
+            ];
+
+            document.querySelectorAll('.product-item').forEach(productItem => {
+                if (productItem.querySelector('.size-select')) return;
+                const selectorWrapper = document.createElement('div');
+                selectorWrapper.className = 'size-selector';
+                selectorWrapper.innerHTML = `
+                    <label>Size:</label>
+                    <select class="size-select" required>
+                        ${sizeOptions.map(option => `<option value="${option.value}">${option.label}</option>`).join('')}
+                    </select>
+                `;
+                const productActions = productItem.querySelector('.product-actions');
+                if (productActions) {
+                    productItem.insertBefore(selectorWrapper, productActions);
+                }
+            });
+        }
+
+        setupProductSizeSelectors();
+
+        function updateCartCount() {
+            if (window.updateCartIcon) return window.updateCartIcon();
+            const stored = JSON.parse(localStorage.getItem('cart') || '[]');
+            const countEl = document.querySelector('.cart-count');
+            if (countEl) countEl.textContent = stored.length || 0;
+        }
+
+        function goToCheckout() {
+            window.location.href = 'checkout.html';
+        }
+
+        function getQuickViewSize() {
+            const activeButton = document.querySelector('.quickview-sizes .size-option.active');
+            return activeButton ? activeButton.textContent.trim() : '';
+        }
+
+        function shopAddToCartFromModal() {
+            const title = document.getElementById('quickviewTitle').textContent;
+            const price = parseFloat(document.getElementById('quickviewPrice').textContent.replace('$', '')) || 0;
+            const image = document.getElementById('quickviewImage').src;
+            const quantity = parseInt(document.getElementById('quantity').value) || 1;
+            const category = 'QuickView';
+            const size = getQuickViewSize() || 'One Size';
+
+            if (!getQuickViewSize()) {
+                showNotification('Please select a size before adding to cart.');
+                return;
+            }
+
+            for (let i = 0; i < quantity; i++) {
+                if (typeof sharedAddToCart === 'function') sharedAddToCart(title, price, image, size, category);
+                else {
+                    const fallback = JSON.parse(localStorage.getItem('cart') || '[]');
+                    fallback.push({ id: Date.now(), name: title, price, quantity: 1, image, category, size });
+                    localStorage.setItem('cart', JSON.stringify(fallback));
+                }
+            }
+
+            if (typeof sharedUpdateCartIcon === 'function') sharedUpdateCartIcon();
+            closeQuickView();
+            showNotification('Added to cart!');
+            if (typeof sharedGoToCheckout === 'function') {
+                sharedGoToCheckout();
+            } else {
+                window.location.href = 'checkout.html';
+            }
+        }
+
+        function setupQuickViewSizeButtons() {
+            document.querySelectorAll('.quickview-sizes .size-option').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.quickview-sizes .size-option').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                });
+            });
+        }
+
+        // Quick View
+        function quickView(btn) {
+            const productItem = btn.closest('.product-item');
+            const title = productItem.querySelector('h4').textContent;
+            const price = productItem.dataset.price;
+            const image = productItem.querySelector('img').src;
+            const description = productItem.querySelector('.product-description').textContent;
+
+            document.getElementById('quickviewTitle').textContent = title;
+            document.getElementById('quickviewPrice').textContent = '$' + parseFloat(price).toFixed(2);
+            document.getElementById('quickviewImage').src = image;
+            document.getElementById('quickviewDescription').textContent = description;
+            document.querySelectorAll('.quickview-sizes .size-option').forEach(b => b.classList.remove('active'));
+            const defaultOption = document.querySelector('.quickview-sizes .size-option');
+            if (defaultOption) defaultOption.classList.add('active');
+
+            document.getElementById('quickviewModal').classList.add('active');
+        }
+
+        function closeQuickView() {
+            document.getElementById('quickviewModal').classList.remove('active');
+        }
+
+        setupQuickViewSizeButtons();
+
+        document.querySelectorAll('.product-item .product-image img').forEach(img => {
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', function () {
+                const productItem = this.closest('.product-item');
+                if (!productItem) return;
+                shopAddToCart(productItem, true);
+            });
+        });
+
+        function increaseQty() {
+            const input = document.getElementById('quantity');
+            input.value = Math.min(10, parseInt(input.value) + 1);
+        }
+
+        function decreaseQty() {
+            const input = document.getElementById('quantity');
+            input.value = Math.max(1, parseInt(input.value) - 1);
+        }
+
+        // Sorting
+        document.getElementById('sort').addEventListener('change', (e) => {
+            const sortValue = e.target.value;
+            // Sorting logic would go here
+        });
+
+        // View options
+        document.querySelectorAll('.view-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const view = btn.dataset.view;
+                document.getElementById('productsGrid').className = 'products-grid ' + view;
+            });
+        });
+
+        function filterProductsByCategory(category) {
+            document.querySelectorAll('.product-item').forEach(item => {
+                const itemCategory = item.dataset.category || '';
+                item.style.display = category === 'all' || itemCategory === category ? '' : 'none';
+            });
+        }
+
+        document.querySelectorAll('.category-tab').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.category-tab').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                filterProductsByCategory(btn.dataset.category);
+            });
+        });
+
+        // Price range filter
+        document.getElementById('priceRange').addEventListener('input', (e) => {
+            document.getElementById('priceValue').textContent = '$0 - $' + e.target.value;
+        });
+
+        // Reset filters
+        document.getElementById('resetFilters').addEventListener('click', () => {
+            document.querySelectorAll('.filter-item input').forEach(input => {
+                input.checked = false;
+            });
+        });
+
+        // Notification
+        function showNotification(message) {
+            const notif = document.createElement('div');
+            notif.className = 'notification';
+            notif.textContent = message;
+            document.body.appendChild(notif);
+            setTimeout(() => notif.remove(), 3000);
+        }
+
+        // Close modals on outside click
+        window.addEventListener('click', (e) => {
+            const cartModal = document.getElementById('cartModal');
+            const quickviewModal = document.getElementById('quickviewModal');
+            if (e.target === cartModal) closeCart();
+            if (e.target === quickviewModal) closeQuickView();
+        });
+
+        // Contact form mailto handler
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('contactName').value.trim();
+            const senderEmail = document.getElementById('contactEmail').value.trim();
+            const subject = document.getElementById('contactSubject').value.trim();
+            const message = document.getElementById('contactMessage').value.trim();
+            const receiverEmail = 'mk5166567@gmail.com';
+            const receiverPhone = '+923153361296';
+
+            if (!name || !senderEmail || !subject || !message) {
+                showNotification('Please complete all contact fields.');
+                return;
+            }
+
+            const body = encodeURIComponent(
+                `Sender: ${name} <${senderEmail}>\n\nMessage:\n${message}`
+            );
+            const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(receiverEmail)}&su=${encodeURIComponent(subject)}&body=${body}`;
+
+            window.location.href = gmailUrl;
+            showNotification('Opening Gmail compose in browser...');
+        });
+
+        document.getElementById('sendSmsButton').addEventListener('click', function () {
+            const name = document.getElementById('contactName').value.trim();
+            const senderEmail = document.getElementById('contactEmail').value.trim();
+            const message = document.getElementById('contactMessage').value.trim();
+            const receiverPhone = '+923153361296';
+
+            if (!name || !senderEmail || !message) {
+                showNotification('Please fill in name, email, and message before sending SMS.');
+                return;
+            }
+
+            const smsBody = encodeURIComponent(
+                `Sender: ${name} <${senderEmail}>\n\nMessage:\n${message}`
+            );
+            window.location.href = `sms:${receiverPhone}?body=${smsBody}`;
+            showNotification('Opening SMS app...');
+        });
+    </script>
+</body>
+</html>
